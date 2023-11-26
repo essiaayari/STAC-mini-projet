@@ -1,0 +1,36 @@
+
+ <!-- pour la  barre de recherche des événements mensuel -->
+ <div class="search-box">
+  <input type="text"  id="search" placeholder="Search.."  [(ngModel)]="searchtext" (input)="searmonthlyevents()" >
+  <button><i class="fas fa-search"></i></button>
+</div>
+ <!-- les événements mensuel-->
+
+<div *ngFor="let e of eventm" class="event-details">
+  <div class="event-image" [style.background-image]="'url(' + e.image + ')'" >
+    <div class="text-content">
+      <br><br>
+      <h6>{{ e.date |date}}</h6> <!-- pipe  -->
+      <h1 class="name">{{ e.nom |uppercase}}</h1> <!-- pipe  -->
+      <button type="button" (click)="toggleDetails(e)">Détails</button>
+    </div>
+  </div>
+<!-- affichage des informations pour chaque événement -->
+  <div class="addition">
+    <div *ngIf="e.showDetails" class="additional-info">
+      Lieu {{e.lieu |titlecase}}  <!-- pipe  -->
+     
+      <div *ngFor="let p of e.partenaire">
+        <p>{{ e.description }}</p>
+      
+        En partenariat avec : {{ p.nom |titlecase}} <!-- pipe  -->
+         <img class="logo" [src]="p.logo" alt="Partenaire Logo">
+      </div>
+      
+      <div *ngFor="let o of e.organisateurs"> 
+        <p>Organisée par : {{ o.nom }}</p>
+        <p>{{ o.email }}</p>
+      </div>
+    </div>
+  </div>
+</div>

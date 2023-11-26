@@ -1,0 +1,51 @@
+<div class="row">
+
+  <div class="col-md-9 event-details">
+ <!-- pour la  barre de recherche des événement hébdomadaires -->
+ <div class="search-box">
+  <input type="text"  id="search" placeholder="Search.."  [(ngModel)]="searchtext" (input)="searchweeklyevents()" >
+  <button><i class="fas fa-search"></i></button>
+</div>
+
+<div *ngFor="let e of eventw" class="">
+  <div class="event-image" [style.background-image]="'url(' + e.image + ')'" > 
+    <div class="text-content">
+      <br><br>
+      <h6>{{ e.date | date }}</h6>       <!-- pipe -->
+      <h1 class="name">{{ e.nom | uppercase }}</h1><!-- pipe -->
+      <button type="button" (click)="toggleDetails(e)">Détails</button>
+    </div>
+  </div>
+  <!-- affichage des informations pour chaque événement -->
+
+  <div class="addition">
+    <div *ngIf="e.showDetails" class="additional-info">
+      <div [ngClass]="{'text-uppercase': e.showDetails}">Lieu {{ e.lieu }}</div> <!-- ngclass -->
+      <div *ngFor="let p of e.partenaire">
+        <p>{{ e.description }}</p>
+        En partenariat avec : {{ p.nom | titlecase }} <img class="logo" [src]="p.logo" alt="Partenaire Logo">
+      </div>
+      
+      <div *ngFor="let o of e.organisateurs"> 
+        <p>Organisée par : {{ o.nom }}</p>
+        <p>{{ o.email }}</p>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- publicité avec api -->
+<div class="col-md-3 ad" data-spy="scroll" data-target="#advertisement-container" data-offset="0">
+  <div id="advertisement-container" class="advertisement p-3">
+    <h4>Publicité</h4>
+    <hr>
+    <i class="fas fa-ad fa-2x"></i>
+    <div class="advertisement-container">
+      <app-pub></app-pub>
+    </div>
+  </div>
+</div>
+</div>
+
+

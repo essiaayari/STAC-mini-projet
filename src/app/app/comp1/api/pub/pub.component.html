@@ -1,0 +1,25 @@
+<div *ngIf="artistInfo">
+  <h2>Artist Information</h2>
+  <p><strong>Name:</strong> {{ artistInfo.name }}</p>
+  <p><strong>Sort Name:</strong> {{ artistInfo['sort-name'] }}</p>
+  <p><strong>Type:</strong> {{ artistInfo.type }}</p>
+  <p><strong>Country:</strong> {{ artistInfo.country }}</p>
+  <p><strong>Disambiguation:</strong> {{ artistInfo.disambiguation }}</p>
+
+  <div *ngIf="artistInfo.area">
+    <h3>Area Information</h3>
+    <p><strong>Area Name:</strong> {{ artistInfo.area.name }}</p>
+    <p><strong>Area Type:</strong> {{ artistInfo.area.type }}</p>
+  </div>
+
+  <div *ngIf="artistInfo['life-span']">
+    <h3>Life Span</h3>
+    <p><strong>Started:</strong> {{ artistInfo['life-span'].begin | date: 'MMMM yyyy' }}</p>
+    <p *ngIf="artistInfo['life-span'].ended"><strong>Ended:</strong> {{ artistInfo['life-span'].end | date: 'MMMM yyyy' }}</p>
+    <p *ngIf="!artistInfo['life-span'].ended"><strong>Still Active</strong></p>
+  </div>
+  
+
+<div *ngIf="!artistInfo">
+  <p>No artist information available.</p>
+</div>

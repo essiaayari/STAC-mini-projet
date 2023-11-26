@@ -1,0 +1,318 @@
+{
+  "Membre": [
+    {
+      "id": 1,
+      "nom_pren": "Attoueni Ahmed",
+      "image": "assets/m1.jpg",
+      "email": "tt.tt@example.com",
+      "poste": "Vice President",
+      "facebook": "eeee.facebook",
+      "instagram": "eeee.instagram"
+    },
+    {
+      "id": 2,
+      "nom_pren": "Ouertani Takwa",
+      "image": "assets/takwa.jpg",
+      "email": "takwa@gmail.com",
+      "poste": "President",
+      "facebook": "eeee.facebook",
+      "instagram": "eeee.instagram"
+    },
+    {
+      "id": 3,
+      "nom_pren": "Ayari Essia",
+      "image": "assets/essia2.jpg",
+      "email": "essia@gmail.com",
+      "poste": "president",
+      "facebook": "eeee.facebook",
+      "instagram": "eeee.instagram"
+    },
+    {
+      "id": 4,
+      "nom_pren": "Jbeli Nour",
+      "image": "assets/m4.jpg",
+      "email": "nounou@yahoo.com",
+      "poste": "responsable marketing",
+      "facebook": "eeee.facebook",
+      "instagram": "eeee.instagram"
+    },
+    {
+      "id": 5,
+      "nom_pren": "Tounsi Ameni",
+      "image": "assets/m5.jpg",
+      "email": "Ameni@example.com",
+      "poste": "responsable de communauté",
+      "facebook": "eeee.facebook",
+      "instagram": "eeee.instagram"
+    },
+    {
+      "id": 6,
+      "nom_pren": "Dridi Youssef",
+      "image": "assets/m6.jpg",
+      "email": "youss20@yahoo.com",
+      "poste": "assistante ressources humaines",
+      "facebook": "eeee.facebook",
+      "instagram": "eeee.instagram"
+    }
+  ],
+  "monthlyevents": [
+    {
+      "id": 1,
+      "image": "assets/beach.gif",
+      "nom": "Beach party",
+      "lieu": "Bizerte",
+      "date": "2023-08-27",
+      "description": "Plongez dans l'énergie exaltante de notre Party Beach , une célébration en bord de mer conçue pour éveiller tous nos sens.",
+      "partenaire": [
+        {
+          "nom": "Maison des jeunes",
+          "logo": "assets/biz.jpg"
+        }
+      ],
+      "organisateurs": [
+        {
+          "nom": "Tounsi Ameni",
+          "email": "Ameni@gmail.com"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "image": "assets/party1.jpg",
+      "nom": "STAC's Birthday",
+      "lieu": "Billionaire",
+      "date": "2023-12-01",
+      "description": "Cette soirée promet d'être une expérience inoubliable, imprégnée d'une ambiance chaleureuse et de festivités en l'honneur des moments précieux que nous avons partagés tout au long de notre parcours.",
+      "partenaire": [
+        {
+          "nom": "Madame Hachicha",
+          "logo": "assets/hchicha.png"
+        },
+        {
+          "nom": "Stil",
+          "logo": "assets/still.jpg"
+        }
+      ],
+      "organisateurs": [
+        {
+          "nom": "Ouertani Takwa",
+          "email": "takwa@gmail.com"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "image": "assets/color.jpg",
+      "nom": "Color party",
+      "lieu": "Parc",
+      "date": "2023-05-11",
+      "description": "Cette Fête des Couleurs est une ode à la joie, à la créativité et à la diversité",
+      "partenaire": [
+        {
+          "nom": "Insta",
+          "logo": "assets/insat.png"
+        }
+      ],
+      "organisateurs": [
+        {
+          "nom": "Attoueni Ahmed",
+          "email": "tt.tt@example.com"
+        },
+        {
+          "nom": "Jbeli Nour",
+          "email": "nounou@yahoo.com"
+        }
+      ]
+    }
+  ],
+  "weeklyevents": [
+    {
+      "id": 1,
+      "image": "assets/cinema.jpg",
+      "nom": "Cinéma",
+      "lieu": "Azur City",
+      "date": "2023-11-08",
+      "description": "De séances rétro à des avant-premières exclusives, notre journée de projection comprend des séances spéciales pour offrir une expérience cinématographique unique. ",
+      "partenaire": [
+        {
+          "nom": "Pathé ",
+          "logo": "assets/pathe.png"
+        }
+      ],
+      "organisateurs": [
+        {
+          "nom": "Emna Dridi",
+          "email": "dr-emna@example.com"
+        },
+        {
+          "nom": "Tounsi Youssef",
+          "email": "youssef@gmail.com"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "image": "assets/cancer.jpg",
+      "nom": "Journée de sensabilisation",
+      "lieu": "Campus Manar",
+      "date": "2023-10-07",
+      "description": "La journée commencera par des discours inspirants de survivantes, de professionnels de la santé et de défenseurs engagés dans la lutte contre le cancer du sein. ",
+      "partenaire": [
+        {
+          "nom": "Faculté de Medicine",
+          "logo": "assets/med.png"
+        }
+      ],
+      "organisateurs": [
+        {
+          "nom": "toute l'equipe",
+          "email": "STAC@gmail.com"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "image": "assets/yoga.jpg",
+      "nom": "Yoga et Méditation",
+      "lieu": "Sidi Bou Said",
+      "date": "2023-09-30",
+      "description": "Une journée spéciale est conçue pour vous offrir une pause revitalisante du stress quotidien et vous permettre de vous reconnecter avec votre esprit, votre corps et votre âme.",
+      "partenaire": [
+        {
+          "nom": "Mme.Tounsi Nesrine",
+          "logo": "assets/yogalog.jpg"
+        }
+      ],
+      "organisateurs": [
+        {
+          "nom": "Attoueni Ahmed",
+          "email": "tt.tt@example.com"
+        }
+      ]
+    }
+  ],
+  "EventSchedule": [
+    {
+      "day": "Friday",
+      "nom1": "Pop Night",
+      "nom2": "",
+      "nom3": "Rock and  Roll",
+      "artist1": "Adele",
+      "artist2": "",
+      "artist3": "Rihana",
+      "time": "8:00-1:00 PM",
+      "date": "11/07/2024",
+      "image1": "assets/img18.jpeg",
+      "image2": "assets/img11.jpeg",
+      "image3": "assets/img20.jpeg"
+    },
+    {
+      "day": "Saturday",
+      "nom1": "",
+      "nom2": "Jazz night",
+      "nom3": "",
+      "artist1": "",
+      "artist2": "Four play",
+      "artist3": "",
+      "time": "11:00-3:00 PM",
+      "date": "11/08/2024",
+      "image1": "assets/img12.jpeg",
+      "image2": "assets/img19.jpeg",
+      "image3": "assets/img10.jpeg"
+    },
+    {
+      "day": "Sunday",
+      "nom1": "House Night",
+      "nom2": "",
+      "nom3": "local concert",
+      "artist1": "By Shouse",
+      "artist2": "",
+      "artist3": " By Taylor ",
+      "time": "8:00-00:00 PM",
+      "date": "11/09/2024",
+      "image1": "assets/img15.jpeg",
+      "image2": "assets/R.png",
+      "image3": "assets/img16.jpeg"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "Nom": "essia",
+      "Prenom": "ayari",
+      "email": "ayariessia228@gmail.com",
+      "Telephone": "28333545",
+      "Sujet": "events of next month",
+      "Message": "anythinggggg"
+    },
+    {
+      "Nom": "touqou",
+      "Prenom": "arcs",
+      "email": "ouertanii.takwaa@gmail.com",
+      "Telephone": 55555555,
+      "Sujet": "jnj",
+      "Message": "aaaa",
+      "id": 2
+    },
+    {
+      "Nom": "dererez",
+      "Prenom": "rfgrgr",
+      "email": "zaaa@ggg",
+      "Telephone": 12345678,
+      "Sujet": "rdvggffg",
+      "Message": "grgrgr",
+      "id": 3
+    },
+    {
+      "Nom": "qsdsdqsd",
+      "Prenom": "qsdsqdsq",
+      "email": "sdqdq@dqsdqs",
+      "Telephone": 6556465464,
+      "Sujet": "qsddqsdqs",
+      "Message": "qdsqddsq",
+      "id": 4
+    }
+  ],
+  "gallery": [
+    {
+      "image": "assets/ev1.jpg",
+      "title": "New Year Party",
+      "desc": "31-12-2022"
+    },
+    {
+      "image": "assets/ev2.jpg",
+      "title": "Happy hours",
+      "desc": "25-05-2023"
+    },
+    {
+      "image": "assets/ev9.jpg",
+      "title": "Volunteering Marathon",
+      "desc": "05-01-2023"
+    },
+    {
+      "image": "assets/ev4.jpg",
+      "title": "DJ Night",
+      "desc": "07-08-2023"
+    },
+    {
+      "image": "assets/ev5.jpg",
+      "title": "Camping",
+      "desc": "14-05-2023"
+    },
+    {
+      "image": "assets/ev6.jpg",
+      "title": "Concert",
+      "desc": "26-09-2022"
+    },
+    {
+      "image": "assets/ev77.jpg",
+      "title": "bowling",
+      "desc": "14-05-2023"
+    },
+    {
+      "image": "assets/ev8.jpg",
+      "title": "STAC's Birthday",
+      "desc": "04-10-2023"
+    }
+  ]
+}

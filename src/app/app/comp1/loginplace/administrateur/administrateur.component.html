@@ -1,0 +1,46 @@
+<div class="container-fluid">
+
+  <div class="row flex-nowrap">
+ 
+    <aside class="col-auto col-md-3 col-xl-2 px-sm-2 px-0 bg-dark">
+      <div class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white min-vh-100">
+        <h2 class="mb-4">Admin Dashboard</h2>
+            <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start">
+
+
+          <li class="nav-item">
+            <a class="nav-link align-middle px-0 btn btn-dark w-auto me-2" routerLink="/admin/change-password">
+              <i class="fa-solid fa-key"></i> Changer Mot de passe
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link align-middle px-0 btn btn-dark w-auto me-2" routerLink="/admin/manage-members">
+              <i class="fa-solid fa-user-group"></i>  Gérer les membres
+            </a>
+          </li>
+    
+          <li class="nav-item dropdown">
+            <a class="nav-link dropbtn dropdown-toggle btn btn-dark w-auto me-2" routerLink="/admin/manage-events">
+              <i class="fa-solid fa-calendar-minus"></i>  Gérer les événements
+            </a>
+            <div class="dropdown-content">
+              <a class="week btn  w-auto me-2" routerLink="/admin/manageweeklyevents" ><i class="fa-solid fa-calendar-week"></i>Weekly events</a><br>
+              <a class="week btn  w-auto me-2" routerLink="/admin/managemonthlyevents" ><i class="fa-solid fa-calendar-days"></i>Monthly events</a>
+            </div>
+          </li>
+          
+    
+          
+        </ul>
+        <button class="btn btn-outline-danger disc" (click)="onDisconnect() "><i class="fa fa-sign-out" aria-hidden="true"></i> déconnexion</button>
+      </div>
+    </aside>
+    
+
+  
+    <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-md-4">
+      <router-outlet></router-outlet>
+    </main>
+
+  </div>
+</div>

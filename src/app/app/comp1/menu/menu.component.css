@@ -1,0 +1,183 @@
+img {
+  height: 130px;
+  width: 130px;
+  
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style-type: none;
+
+}
+
+nav{
+  position: fixed;
+  z-index: 101;
+  padding: 10px 20px;
+  height: 65px;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  box-sizing: border-box; 
+  align-items: center;
+  background-color: transparent;
+  transition: background-color 0.5s ease;
+
+}
+section{
+  background-image: url(src\assets\img3.jpg);
+  background-size: cover;
+
+}
+header{
+ 
+  height: 100vh;
+  width: 100vw;
+}
+a{
+  color: white;
+  
+}
+ul{
+  display: flex;
+
+}
+ul li{
+  margin-left: 20px;
+}
+ul li a{
+text-decoration: none;
+padding:6px  ;
+   color: white(17, 16, 16);
+  border-radius:20px ;
+}
+ul li a:hover,
+ul li a:active{
+background-color: #fff;
+color: #2b1055;
+}
+img{
+height: 100px;
+width: 100px;
+}
+
+
+.minimenu{
+display: none;
+position: absolute;
+top: 35px;
+right: 50px;
+width: 100px;
+
+}
+
+
+@media screen and (max-width:900px){
+nav{
+padding: 0;
+}
+.minimenu{
+display: block;
+}
+.links{
+top: 0;
+left: 0;
+position: absolute;
+display: flex;
+flex-direction: column;
+background-color: rgba(191, 181, 181, 0.205);
+backdrop-filter: blur(8px);
+width: 100%;
+height: 100vh;
+justify-content: center;
+align-items: center;
+margin-left: -100%;
+transition: all 0.5s ease;
+
+}
+.links.mobile-menu{
+margin-left: 0;
+
+}
+.logo{
+display: none;
+
+
+}
+ul li{
+margin: 15px 0;
+font-size: 1.2em;
+}
+}
+
+.navbar{
+  display: flex;
+      justify-content: space-between;
+      align-items: center;
+      
+}
+
+.logo{
+margin:0 300px;
+height: 85px;
+width: 85px;
+margin-top: -10px
+}
+
+
+
+.dropdown {
+display: inline-block;
+position: relative;
+background-color: transparent;
+}
+
+.dropdown-content {
+display: none;
+position: absolute;
+background-color: transparent;
+min-width: 160px;
+box-shadow: 0 8px 16px 0 rgba(85, 6, 6, 0.2);
+z-index: 1;
+}
+
+.dropdown-content a {
+color: black;
+padding: 12px 16px;
+text-decoration: none;
+display: block;
+}
+
+.dropdown-content a:hover {
+background-color: transparent;
+}
+
+.dropdown:hover .dropdown-content {
+display: block;
+}
+
+.b1{
+border-radius: 4rem;
+font-size: 1rem;
+letter-spacing: 0.1rem;
+font-weight: 600;
+background-color: transparent;
+margin-top: -27px;
+height: 40px;
+width: 130px;
+
+}
+
+
+.neon-background-button{
+box-shadow: none;
+
+
+}
+.b1:hover {
+background-color: #ededed;
+color: #2b1055;
+box-shadow: 0 0 10px #2332ff, 0 0 20px #ff00a6;
+}

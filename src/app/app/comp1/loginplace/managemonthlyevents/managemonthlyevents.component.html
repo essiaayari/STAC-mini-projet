@@ -1,0 +1,85 @@
+<div>
+  <h2>Manage monthly Events</h2>
+<!-- pour la barre de recherche -->
+  <div class="container">
+    <div class="row">
+      <div class="search-members">
+        <input type="text" placeholder="Search..." [(ngModel)]="searchtext" (input)="searchevents()">
+      </div>
+  
+
+<!-- tableau -->
+    <div class="container-xl">
+      <div class="table-responsive">
+        <div class="table-wrapper">
+          <table class="table table-striped table-hover table-content">
+            <thead>
+              <tr>
+                <th scope="col">Id</th>
+                <th scope="col">Nom</th>
+                <th scope="col">Image</th>
+                <th scope="col">Lieu</th>
+                <th scope="col">Date</th>
+                <th scope="col">Modification</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let e of eventsm" class="center-align">
+                <td>{{ e.id }}</td>
+                <td>{{ e.nom }}</td>
+                <td>{{ e.image }}</td>
+                <td>{{ e.lieu }}</td>
+                <td>{{ e.date }}</td>
+                <td>
+                  <button type="button" (click)="deleteEvent(e.id)" class="btn">
+                    <i class="fa-solid fa-calendar-xmark"></i>
+                  </button>
+                  <button type="button" (click)="editwmonthly(e)" class="btn"><i class="fa-solid fa-pen"></i>           </button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+       <!-- formulaire -->
+ 
+    <div class="container">
+      <form [formGroup]="eventForm" (ngSubmit)="addEvent()" class="mt-4">
+        <div *ngIf="visible" class="row justify-content-center">
+          <div class="col-sm-8 col-md-6 col-lg-4 mb-3">
+            <label for="nom" class="form-label">Nom </label>
+            <input type="text" class="form-control" id="nom" formControlName="nom" required>
+            <div *ngIf="isvalidnom()" class="form-control is-invalid">
+              Le nom doit obligatoirement 
+            </div>
+          </div>
+    
+          <div class="col-sm-8 col-md-6 col-lg-4 mb-3">
+            <label for="image" class="form-label">Image</label>
+            <input type="text" class="form-control" id="image" formControlName="image" required>
+          </div>
+    
+          <div class="col-sm-8 col-md-6 col-lg-4 mb-3">
+            <label for="lieu" class="form-label">Lieu</label>
+            <input type="text" class="form-control" id="lieu" formControlName="lieu" required>
+          </div>
+    
+          <div class="col-sm-8 col-md-6 col-lg-4 mb-3">
+            <label for="date" class="form-label">Date</label>
+            <input type="date" class="form-control" id="date" formControlName="date" required>
+          </div>
+        </div>
+        
+    
+        <button type="button" class="btn btn-outline-success" (click)="validerModifications()">Valider les modifications</button>
+
+        <div class="d-flex justify-content-center align-items-center">
+          <h3 class="me-2">
+            <i class="fa-solid fa-calendar-circle-plus"></i>
+              Ajouter un évenement
+          </h3>
+          <button type="submit"  class="btn btn-outline-info" (click)="activer()">Ajouter</button>
+        </div>
+      </form>
+</div>

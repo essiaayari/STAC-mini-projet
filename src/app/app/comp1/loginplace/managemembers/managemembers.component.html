@@ -1,0 +1,98 @@
+<h1>Liste des membres</h1>
+<!-- pour la  barre de recherche des membres -->
+<div class="container">
+  <div class="row">
+    <div class="search-members">
+      <input type="text" placeholder="Search..." [(ngModel)]="searchtext" (input)="searchMembers()">
+    </div>
+
+
+
+
+<!-- tableau des membres -->
+<div class="container-xl" >
+  <div class="table-responsive">
+    <div class="table-wrapper">
+      <table class="table table-striped table-hover table-content">
+        <thead>
+          <tr >
+            <th scope="col">Id</th>
+            <th scope="col">Nom_pren</th>
+            <th scope="col">Email</th>
+            <th scope="col">Image</th>
+            <th scope="col">Facebook</th>
+            <th scope="col">Instagram</th>
+            <th scope="col">Modification</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let m of members" class="center-align">
+            <td>{{ m.id }}</td>
+            <td>{{ m.nom_pren}}</td>
+            <td>{{ m.image }}</td>
+            <td>{{m.email}}</td>
+            <td>{{ m.facebook }}</td>
+            <td>{{ m.instagram }}</td>
+            <td > <button type="button" (click)="deleteMember(m.id)"  class="btn"><i class="fa-solid fa-user-xmark"></i></button>
+              <button type="button"  (click)="editMember(m)"   class="btn"><i class="fa-solid fa-user-pen"></i></button>
+            </td>
+              </tr>
+              </tbody>
+              </table>
+              </div>
+              </div>
+              </div>
+ 
+
+<!-- formulaire -->
+
+              <div class="container">
+                <form [formGroup]="memberForm" (ngSubmit)="addMember()" class="mt-4">
+                  <div *ngIf="visible" class="row justify-content-center">
+                    <div class="col-sm-8 col-md-6 col-lg-4 mb-3">
+                      <label for="nom_pren" class="form-label">Nom et Prenom</label>
+                      <input type="text" class="form-control" id="nom_pren" formControlName="nom_pren" required>
+                      <div *ngIf="isvalidnom()" class="form-control is-invalid">
+                        Le nom doit obligatoirement 
+                      </div>
+                    </div>
+              
+                    <div class="col-sm-8 col-md-6 col-lg-4 mb-3">
+                      <label for="email" class="form-label">Email</label>
+                      <input type="email" class="form-control" id="email" formControlName="email" required>
+                      <div *ngIf="email?.invalid && email?.touched" class="form-control is-invalid">
+                        Veuillez saisir une adresse email valide.
+                      </div>
+                    </div>
+              
+                    <div class="col-sm-8 col-md-6 col-lg-4 mb-3">
+                      <label for="image" class="form-label">Image</label>
+                      <input type="text" class="form-control" id="image" formControlName="image" required>
+                    </div>
+              
+                    <div class="col-sm-8 col-md-6 col-lg-4 mb-3">
+                      <label for="poste" class="form-label">Poste</label>
+                      <input type="text" class="form-control" id="poste" formControlName="poste" required>
+                    </div>
+              
+                    <div class="col-sm-8 col-md-6 col-lg-4 mb-3">
+                      <label for="facebook" class="form-label">Facebook</label>
+                      <input type="text" class="form-control" id="facebook" formControlName="facebook" required>
+                    </div>
+              
+                    <div class="col-sm-8 col-md-6 col-lg-4 mb-3">
+                      <label for="instagram" class="form-label">Instagram</label>
+                      <input type="text" class="form-control" id="instagram" formControlName="instagram" required>
+                    </div>
+                  </div>
+                  <button type="button" (click)="validerModifications()" class="btn btn-outline-success">Valider les modifications</button>
+
+                  <div class="d-flex justify-content-center align-items-center">
+                    <h3 class="me-2">
+                      <i class="fas fa-user-plus fa-xs"></i>
+                      Ajouter un membre
+                    </h3>
+                    <button type="submit"  class="btn btn-outline-info" (click)="activer()">Ajouter</button>
+                  </div>
+                </form>
+              </div>

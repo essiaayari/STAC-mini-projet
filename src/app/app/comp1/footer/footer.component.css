@@ -1,0 +1,117 @@
+footer {
+  background-color:rgb(0, 0, 0);
+}
+img{
+  height: 70px;
+  width: 70px;
+}
+h4,h5,h6,p {
+  color: aliceblue;
+}
+
+
+.contact:hover{
+  color:blueviolet;
+  font-size: 20px;
+}
+.row {
+  margin: 0 -15px;
+  display: flex;
+}
+
+.col-md-4 {
+  width: 25%;
+  padding: 0 15px;
+}
+
+.social-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+  position: relative;
+}
+
+.social-links li {
+
+  display: inline-block;
+  margin:15px;
+}
+
+.social-links a {
+  color: white;
+  font-size: 20px;
+}
+.social-links a:hover {
+  color:blueviolet;
+  font-size: 20px;
+}
+
+
+.copyright p {
+  font-size: 10px;
+  color: white;
+}
+
+.map{
+  position: absolute;
+  margin-left: 1140px;
+  margin-top: -95px;
+}
+
+iframe{
+  position: absolute;
+  margin-left: 1100px;
+  margin-top: -60px;
+}
+
+.question{
+  position: absolute;
+  margin-top: -25px;
+}
+.contact{
+  margin-left: 50px;
+  position: absolute;
+  margin-top: 15px;
+}
+.follow{
+  margin-left: 20px;
+  position: absolute;
+  margin-top: -25px;
+}
+.image{
+  margin-left: 40px;
+  position: absolute;
+  margin-top: -40px;
+}
+
+.quote{
+  color: white;
+}
+
+@media  (max-width: 767px) {
+
+  .image{
+    margin-left: 200px;
+    position: absolute;
+    margin-top: -10px;
+  }
+  .contact{
+    margin-left: 10px;
+    position: absolute;
+    margin-top: 5px;
+  }
+  .follow{
+    margin-left: 100px;
+    position: absolute;
+    margin-top: 25px;
+
+  }
+
+  iframe{
+    position: absolute;
+    margin-left: 250px;
+    margin-top: -100px;
+  }
+  
+}

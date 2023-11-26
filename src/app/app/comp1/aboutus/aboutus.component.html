@@ -1,0 +1,49 @@
+<div class="body">
+<app-menu></app-menu>
+
+<!--For the MEET OUR MEMEBERS-->
+<div class="container">
+    <div class="row">
+        <div class="col-md-8 mx-auto text-center">
+                <img g="assets/img.png" class="header-img img-fluid my-4">
+                <h1 class="display-4">MEET OUR MEMBERS! </h1>
+                <hr class="my-4">
+           </div>
+        </div>
+    </div>
+
+
+<!-- pour la  bar de recherche -->
+<div class="container">
+  <div class="row">
+    <div class="search-members">
+      <input type="text" placeholder="Search..." [(ngModel)]="searchtext" (input)="searchmembers()">
+    </div>
+<!--ng model:est utilisé pour créer un lien bidirectionnel entre la valeur d'une propriété dans le composant et un élément de formulaire dans le modèle.   -->
+
+
+
+<section>
+  <div class="container">
+    <div class="row" >
+      <div class="col-lg-4" *ngFor="let member of lesmembres" >
+        <div class="card p-0">
+          <div class="card-image" (mouseover)="showDetails(member)" (mouseout)="hideDetails(member)"> <!-- pour le hover des images des membres -->
+           
+            <img [src]="member.image" alt="{{ member.nom_pren }}">
+            <div class="text" *ngIf="show && member === currentmember">
+              <h4 class="pt-2">{{ member.nom_pren }}</h4>
+              <h5>{{ member.poste }}</h5>
+              <div class="social-icons">
+                <a href="{{ member.facebook }}" ><i class="fab fa-facebook-f"></i></a>
+                <a href="{{ member.instagram }}" ><i class="fab fa-instagram"></i></a>
+                <a href="mailto:{{ member.email }}"><i class="far fa-envelope"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</div>

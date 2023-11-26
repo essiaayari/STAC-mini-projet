@@ -1,0 +1,54 @@
+<app-menu></app-menu>
+
+<div class="img1">
+
+
+<!-- formulaire pour nous contacter -->
+  <form [formGroup]="frm" (ngSubmit)="enregistrer()" class="border p-3 rounded" >
+    <div class="row">
+      <div class="col mb-3">
+        <label>Nom</label>
+        <input type="text" formControlName="Nom" placeholder="Essia" >
+        <div *ngIf="nom?.invalid && nom?.touched" class="form-text text-danger">
+          Le nom est obligatoire
+        </div>
+        <div *ngIf="isvalidnom()" class="form-text text-danger">
+          Le nom doit obligatoirement contenir au moins 3 caracteres
+        </div>
+      </div>
+      <div class="col mb-3">
+        <label>Prénom</label>
+        <input type="text" formControlName="Prenom" placeholder="Ayari" >
+        <div *ngIf="prenom?.invalid && prenom?.touched" class="form-text text-danger">
+          Le prénom est obligatoire
+        </div>
+        <div *ngIf="isvalidprenom()" class="form-text text-danger">
+          Le prenom doit obligatoirement contenir au moins 3 caracteres
+        </div>
+      </div>
+      <div class="col mb-3">
+        <label>Email</label>
+        <input type="text" formControlName="email" placeholder="exemple@gmail.com" >
+        <div *ngIf="email?.invalid && email?.touched" class="form-text text-danger">
+          Veuillez saisir une adresse email valide.
+        </div>
+      </div>
+      <div class="col mb-3">
+        <label>Téléphone</label>
+        <input type="number" formControlName="Telephone" placeholder="28333545" >
+        <div *ngIf="isvalidtelephone()" class="form-text text-danger">
+          saisir un numero de 8chiffres
+        </div>
+      </div>
+      <div class="col mb-3">
+        <label>Sujet</label>
+        <input type="text" formControlName="Sujet" placeholder="Événement" >
+      </div>
+      <div class="col mb-3">
+        <label>Message</label>
+        <input class="messagearea" type="text" formControlName="Message" placeholder="Write anything" >
+      </div>
+    </div>
+    <input type="submit" [disabled]="frm.invalid" value="Submit" class="bouton">
+  </form>
+</div>

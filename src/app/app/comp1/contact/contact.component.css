@@ -1,0 +1,61 @@
+.img1{
+    background-image: url("src\assets\img3.jpg");
+    background-size: cover;
+    height: 750px;
+    background-position: center;
+    top: 802px;
+    left: 0;
+    
+    
+}
+h1{
+    position: absolute;
+  top: 430%;
+  left: 45%;
+  color: aliceblue;
+  letter-spacing: 0.1rem;
+  font-weight: 600;
+
+}
+label{
+    margin-top: 40px;
+}
+input{
+    margin-top: 20px;
+    border: black; 
+    background-color: transparent;
+}
+
+
+form{
+    background-color: rgba(255, 255, 255, 0.416); 
+    position: absolute; 
+    top: 60%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    width: 500px;
+    height: 600px;
+}
+.bouton{
+    background-color: black;
+    margin-left: 35%;
+    margin-top: 45px;
+     color: white;
+      padding: 10px 20px; 
+      cursor: pointer;
+}
+.bouton:hover{
+    background-color: #007bff;
+
+}
+@media (max-width: 768px) {
+    form {
+      width: 50%; /* Ajustez la largeur à 100% pour les écrans plus petits */
+      height: auto; /* Assurez-vous que la hauteur s'ajuste automatiquement */
+      margin: 5px; /* Réduisez la marge entre les images à 5 pixels */
+      flex-grow: 1;
+    }
+  }
+  
+input.ng-valid { border-left: 2px solid green; }
+input.ng-invalid { border-left: 2px solid red; }

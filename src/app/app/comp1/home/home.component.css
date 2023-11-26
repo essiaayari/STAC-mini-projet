@@ -1,0 +1,465 @@
+.body{
+  background-color: black;
+  height: 100%;
+  margin: 0; 
+
+
+}
+
+
+/*la 1ére partie: la video dans l'acceuil (home)*/
+
+.custom-video {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+
+}
+
+.image1{
+  height: 750px;
+  width: 100%;
+  position: relative;
+}
+.titre  {
+  color: white;
+  font-size: 50px;
+  font-weight: bold;
+  position: absolute;
+  top: 30%; 
+  left: 30%;
+  transform: translate(-30%,-20%);
+}
+.image1 h3{
+  position: absolute;
+  top: 80%;
+  right: 10%;
+  transform: translate(50%,50%);
+  text-align: center;
+  color: white;
+  font-weight: bold;
+}
+.coming_soon {
+  position: absolute;
+  margin-left: 70%;
+  margin-bottom: 50px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  font-size: large;
+  bottom: 10px;
+}
+
+.count {
+  display: inline-block;
+  color: white;
+  font-size: 20px;
+  opacity: 1;
+  margin: 5px;
+  transition: opacity 0.5s ease;
+}
+
+.fa-clock {
+  margin: 5px; 
+}
+.coming_soon_location {
+  position: absolute;
+  margin-left: 20%;
+  margin-bottom: 50px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  font-size: large;
+  bottom: 10px;
+}
+.coming_soon h6{
+  position: absolute;
+  margin-top: -50px;
+  margin-left: 25px;
+  font-size: 24px;
+}
+#location{
+  display: inline-block;
+  color: white;
+  font-size: 20px;
+  opacity: 1;
+  margin: 5px;
+  transition: opacity 0.5s ease;
+}
+.fa-location-dot{
+  margin: 5px;
+
+}
+/* pour le bouton "explore!" */
+.bouton {
+  letter-spacing: 0.1em;
+  background-color: #fffeff36;
+  border-radius: 4rem;
+  color:  whitesmoke ;
+  font-weight: bold;
+  font-size: large;
+  position: absolute;
+  top: 120%; 
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 10px 20px;
+  margin:50px 0 50px 0;
+  ;
+}
+
+
+.bouton:hover {
+    
+    box-shadow: 0 0 10px #2332ff, 0 0 20px #ff00a6;
+}
+.neon-background {
+    box-shadow: 0 0 10px #2332ff, 0 0 20px #ff00a6;
+    border-radius: 15%;
+    transform: translateX(50%);
+}
+
+
+/* pour l'affichage lorsqu'on réduit la taille de la fenétre du navigateur*/
+@media (max-width: 768px) {
+  .image-container {
+    width: 100%;
+    height: auto;
+    margin: 5px;
+    flex-grow: 1;
+  }
+
+}
+
+  
+/* Pour la 2eme partie: "about us" dans l'acceuil (home) */
+.image2{
+
+  background-image: url("src/assets/img5.jpeg");
+  background-size: cover;
+  height: 745px;
+  background-position: center;
+  top: 740px;
+  left: 0;
+  
+}
+.image2 h2{
+  color: white;
+  font-size: 50px;
+  font-weight: bold;
+  top: 850px;
+  left: 30px;
+  position: absolute;
+}
+
+.image2 p{
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  position: absolute;
+  top: 1000px;
+  left: 30px;
+  background-color: rgba(0, 0, 0, 0.06); 
+  padding: 10px; 
+  width: 500px; 
+  box-sizing: border-box; 
+
+}
+/* pour le bouton "Explore More */
+.b1{
+    padding: 1rem 2.8rem;
+    border-radius: 4rem;
+    font-size: 1.6rem;
+    letter-spacing: 0.1rem;
+    font-weight: 600;
+
+  }
+  
+  
+  .neon-background-button{
+    box-shadow: none;
+    transform: translate(-190%,350%);
+
+    
+  }
+  .b1:hover {
+    
+    box-shadow: 0 0 10px #2332ff, 0 0 20px #ff00a6;
+  }
+
+.about {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 60px;
+}
+
+.about-img img {
+  width: 35vw;
+  border-radius: 15%;
+}
+
+.about-img{
+  box-shadow: 0 0 10px #2332ff, 0 0 20px #ff00a6;
+  border-radius: 15%;
+  position: absolute; 
+
+  
+}
+
+/* pour l'affichage lorsqu'on réduit la taille de la fenétre du navigateur*/
+@media only screen and (max-width: 767px) {
+  .image2 p {
+    width: auto; 
+    text-align: center; 
+    margin: 10px auto;
+    font-size: 16px; 
+  }
+  
+  .about-img img {
+    width: 150px;
+    height: auto;
+    position: absolute;
+    margin-top: 40px;
+    
+  }
+  .neon-background{
+    position: absolute;
+    margin-top: 50%;
+  }
+ .b1 {
+  padding: 0.8rem 2.2rem; 
+  font-size: 1rem; 
+  margin-left: 20%;
+  margin-bottom: 100%;
+}
+.about-content h2{
+  text-align: center;
+  margin-left: 30%;
+  
+}
+}
+/*pour la 3éme partie: le tableau des événements dans l'acceuil (home)*/
+
+.image3{
+  background-image: url("src/assets/img9.jpeg");
+  background-size: cover;
+  height: 750px;
+  background-position: center;
+  top: 800px;
+  left: 0;
+  
+}
+.image3 h1{
+  position: absolute;
+  margin: 20px;
+  left: 45%;
+  color: aliceblue;
+  letter-spacing: 0.1rem;
+  font-weight: 600;
+}
+
+
+    .table-container {
+      position: absolute;
+      margin-top: 80px;
+      margin-left: 100px;
+      padding: 10px;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(111, 61, 61, 0.611), 0 0 15px rgba(0, 0, 0, 0.1);
+    background: linear-gradient(to bottom right, #200d33, #f2f2f2);
+    height: 550px; 
+   
+  }    
+    .table {
+      border-collapse: collapse;
+      width: 100%;
+      margin-bottom: 5px;
+      margin-top: 5px;
+      height: 70%; 
+
+    }
+    
+    .table th, .table td {
+      border: 1px solid #ddd;
+      padding: 8px;
+      text-align: center;
+      vertical-align: middle;
+      
+    }
+    
+   th{
+      background-color: rgb(121, 57, 250);
+      height: 50px;
+   }
+  
+   .image-container{
+      width: 320px;
+      height:150px ;
+      background-size: cover;
+     
+  
+  
+   }
+   .td1{
+    color: rgb(239, 239, 239);
+    font-weight:bolder;
+    font-family: 'Courier New', Courier, monospace;
+   }
+   td{
+    height: 50px;
+    width: 300px;
+    background-color: rgb(38, 38, 38);
+    color: white;
+   }
+   @media (max-width: 800px) {
+    .image3 h1 {
+    margin-top: 0px;
+    font-size: 18px; 
+    }
+  
+    .table-container {
+      margin-top: 30px; 
+      margin-left: 20px; 
+      height: auto;
+    }
+  
+    .table th,
+    .table td {
+      padding: 5px;
+    }
+  
+    .image-container {
+      width: 100%; 
+      height: auto; 
+    }
+  }
+
+
+ /*pour la 4éme partie: La gallery dans l'acceuil(home)*/
+.gallery h1{
+  position: absolute;
+  text-align: center;
+  top: 290%;
+  left: 45%;
+  color: aliceblue;
+  letter-spacing: 0.1rem;
+  font-weight: 600;
+  letter-spacing: 0.1rem;
+
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.gallery {
+  background-color: black;
+  background-size: cover;
+  height: 750px;
+  background-position: center;
+  top: 800px;
+  left: 0;
+}
+
+.image {
+  width: 100%; 
+  height: 100%; 
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+}
+
+.gallery .container {
+  transition: .3s ease;
+  position: relative;
+}
+
+.gallery .image-container:hover {
+  transform: scale(1.1) translateZ(0);
+  background-size: 20px;
+  padding: 10px;
+}
+
+.gallery .image-container {
+  transition: .3s ease;
+  position: relative;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  height: 300px;
+  width: 300px;
+  margin: 10px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.gallery .image-container .content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 20px;
+  opacity: 0;
+  transition: opacity ease-in-out 0.4s;
+  text-align: center;
+  color: antiquewhite;
+}
+
+.gallery .image-container:hover {
+  transform: scale(1.1) translateZ(0);
+  background-size: 20px;
+  padding: 10px;
+}
+
+.gallery .image-container:hover .content {
+  opacity: 1;
+}
+
+.gallery .container:hover > .image-container:not(:hover) {
+  filter: brightness(0.5) blur(20px);
+}
+
+/* pour l'affichage lorsqu'on réduit la taille de la fenétre du navigateur*/
+@media (max-width: 768px) {
+  .image-container {
+    width: 100%;
+    height: auto;
+    margin: 5px;
+    flex-grow: 1;
+  }
+  .gallery h1{
+  top: 310%;
+    font-size: 18px; 
+  }
+}
+
+/* pour la ligne horizontale ente la section et le footer*/
+.white-line {
+  background-color: rgb(255, 255, 255);
+  height: 0.5px; 
+  border: none;
+  margin-left: 170px;
+  margin-right: 170px;
+  margin-top: 50px;
+}
+
+
+@media (max-width: 767px) {
+  .footer {
+    position: relative; 
+    
+   
+  position: absolute;
+  margin-top: 1850px;
+  width: 100%;
+  background-color: black;
+  z-index: 1000;
+  color: white; 
+  }
+}
+
+
+
+
